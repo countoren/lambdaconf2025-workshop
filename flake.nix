@@ -29,13 +29,10 @@
         (vims.createNvim {
           inherit pkgs; 
           pkgsPath = ".";
-          fontSize = "24";
+          # fontSize = "24";
 
           # on vifm:
-          # :set viewcolumns=-{name}
-          # :set statusline=_
           additionalVimrc =  '' 
-            let g:neovide_fullscreen = v:true
           '';
           additionalPlugins = with pkgs.vimPlugins; [
 

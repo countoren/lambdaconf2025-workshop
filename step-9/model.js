@@ -1,5 +1,5 @@
-import { Record, Union } from "./fable_modules/fable-library-js.4.13.0/Types.js";
-import { record_type, string_type, union_type } from "./fable_modules/fable-library-js.4.13.0/Reflection.js";
+import { Record, Union } from "./fable_modules/fable-library-js.4.25.0/Types.js";
+import { record_type, string_type, union_type } from "./fable_modules/fable-library-js.4.25.0/Reflection.js";
 
 export class EcoSystem extends Union {
     constructor(tag, fields) {

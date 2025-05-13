@@ -8,24 +8,25 @@
 #![allow(unused_macros,)]
 #![allow(unused_parens,)]
 #![allow(unused_variables,)]
+#![allow(unused_assignments,)]
 mod module_2b58b {
     pub mod Main {
         use super::*;
         use fable_library_rust::Native_::LrcPtr;
         use fable_library_rust::String_::string;
-        #[derive(Clone, Debug, PartialEq, PartialOrd, Hash, Eq,)]
+        #[derive(Clone, Debug, Hash, PartialEq, PartialOrd,)]
         pub enum EcoSystem { FSharp, JS, Rust, }
-        impl core::fmt::Display for Main::EcoSystem {
+        impl core::fmt::Display for EcoSystem {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
                 write!(f, "{}", core::any::type_name::<Self>())
             }
         }
-        #[derive(Clone, Debug, PartialEq, PartialOrd, Hash, Eq,)]
+        #[derive(Clone, Debug, Hash, PartialEq, PartialOrd,)]
         pub struct Message {
             pub ecoSystem: LrcPtr<Main::EcoSystem>,
             pub text: string,
         }
-        impl core::fmt::Display for Main::Message {
+        impl core::fmt::Display for Message {
             fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
                 write!(f, "{}", core::any::type_name::<Self>())
             }
